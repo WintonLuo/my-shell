@@ -37,3 +37,5 @@ set magic                   " 设置正则表达式模式
 set foldenable              " 启用折叠
 set foldmethod=syntax       " 设置根据语法折叠
 set foldlevel=99            " 设置默认不折叠
+
+set diffopt+=iwhtie         " 设置使用vimdiff时忽略空格
