@@ -44,7 +44,7 @@ set hlsearch                " 搜索时高亮显示被找到的文本
 set magic                   " 设置正则表达式模式
 
 set foldenable              " 启用折叠
-set foldmethod=syntax       " 设置根据语法折叠
+set foldmethod=indent       " 设置根据语法折叠
 set foldlevel=99            " 设置默认不折叠
 
 " 插件配置
