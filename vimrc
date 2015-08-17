@@ -1,22 +1,25 @@
 set nocompatible            " 关闭 vi 兼容模式
 
-set encoding=utf-8          " vim内部编码
-set fileencodings=utf-8,GB18030,ucs-bom,default,latin1  " vim 尝试编码顺序
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim 
+call vundle#begin()
 
-set rtp+=~/.vim/bundle/vundle/  
-call vundle#rc()
+Plugin 'gmarik/Vundle.vim'
+Plugin 'bling/vim-airline'
 
-Bundle "gmarik/Vundle"
-Bundle "bling/vim-airline"
+call vundle#end()
 
 filetype plugin on          " 根据文件类型使用不同插件
 filetype indent on          " 根据文件类型使用不同缩进方案
 
-syntax on                   " 自动语法高亮
+set encoding=utf-8          " vim内部编码
+set fileencodings=utf-8,GB18030,ucs-bom,default,latin1  " vim 尝试编码顺序
+
+syntax enable               " 自动语法高亮
 set number                  " 显示行号
 set cursorline              " 高亮当前行
 set cmdheight=1             " 命令行高度
-color winton                 " 配色方案
+color winton                " 配色方案
 
 set laststatus=2            " 始终显示状态栏
 
