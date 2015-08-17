@@ -9,7 +9,7 @@ Plugin 'Lokaltog/vim-powerline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'nathanaelkane/vim-indent-guides'
-"Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic'
 
 call vundle#end()
 
@@ -44,8 +44,9 @@ set hlsearch                " 搜索时高亮显示被找到的文本
 set magic                   " 设置正则表达式模式
 
 set foldenable              " 启用折叠
-set foldmethod=indent       " 设置根据语法折叠
+set foldmethod=marker       " 设置根据语法折叠
 set foldlevel=99            " 设置默认不折叠
+set foldcolumn=2            " 显示折叠
 
 " 插件配置
 
@@ -60,4 +61,8 @@ let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_auto_colors = 0
 let g:indent_guides_guide_size = 1
 let g:indent_guides_start_level = 2
+
+" scrooloose/syntastic
+let g:syntastic_check_on_open = 1
+let g:syntastic_cpp_checkers = ['cpplint']
 
