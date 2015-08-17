@@ -1,11 +1,15 @@
 set nocompatible            " 关闭 vi 兼容模式
 
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim 
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 Plugin 'Lokaltog/vim-powerline'
+Plugin 'scrooloose/nerdtree'
+Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'nathanaelkane/vim-indent-guides'
+"Plugin 'scrooloose/syntastic'
 
 call vundle#end()
 
@@ -16,6 +20,7 @@ set encoding=utf-8          " vim内部编码
 set fileencodings=utf-8,GB18030,ucs-bom,default,latin1  " vim 尝试编码顺序
 
 syntax enable               " 自动语法高亮
+let loaded_matchparen = 1   " 禁用括号高亮
 set number                  " 显示行号
 set nowrap                  " 禁用自动分行
 set cursorline              " 高亮当前行
@@ -42,5 +47,17 @@ set foldenable              " 启用折叠
 set foldmethod=syntax       " 设置根据语法折叠
 set foldlevel=99            " 设置默认不折叠
 
-" 其他配置
-let g:Powerline_symbols='unicode'   " powline 配置
+" 插件配置
+
+" Lokaltog/vim-powerline
+let g:Powerline_symbols='unicode'
+
+" scrooloose/nerdtree
+map <F3> :NERDTreeToggle<CR>
+
+" nathanaelkane/vim-indent-guides
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_auto_colors = 0
+let g:indent_guides_guide_size = 1
+let g:indent_guides_start_level = 2
+
