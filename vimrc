@@ -5,7 +5,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-Plugin 'bling/vim-airline'
+Plugin 'Lokaltog/vim-powerline'
 
 call vundle#end()
 
@@ -17,6 +17,7 @@ set fileencodings=utf-8,GB18030,ucs-bom,default,latin1  " vim 尝试编码顺序
 
 syntax enable               " 自动语法高亮
 set number                  " 显示行号
+set nowrap                  " 禁用自动分行
 set cursorline              " 高亮当前行
 set cmdheight=1             " 命令行高度
 color winton                " 配色方案
@@ -40,3 +41,6 @@ set magic                   " 设置正则表达式模式
 set foldenable              " 启用折叠
 set foldmethod=syntax       " 设置根据语法折叠
 set foldlevel=99            " 设置默认不折叠
+
+" 其他配置
+let g:Powerline_symbols='unicode'   " powline 配置
