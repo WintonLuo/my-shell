@@ -3,7 +3,6 @@
 
 function error() {
     echo -e "\033[31m[ERROR]\033[0m Deploy failed: $1"
-    exit 1
 }
 
 function deployClean() {
@@ -35,7 +34,10 @@ function deployInstall() {
 
             echo -e "\033[36mPlugin: ${url}\033[0m"
             cd ~/.vim/bundle/ && git clone ${url}
-            [ "$?"x != "0"x ] $$ [ "$?"x != "128"x ] $$ error "git error"
+            #code=$?
+            #if [ "$code"x != "0"x ] && [ "$code"x != "128"x ]; then
+            #    error "git error $code"
+            #fi
         fi
     done
 }
