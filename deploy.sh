@@ -58,7 +58,7 @@ if [ "$option"x = "clean"x ]; then
     deployClean
 elif [ "$option"x = "install"x ]; then
     deployInstall
-    #deployCheckers
+    deployCheckers
 else
     echo "Useage: $0 <install|clean>"
     exit 1
