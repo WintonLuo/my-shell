@@ -12,8 +12,8 @@ set t_Co=256
 let g:colors_name = "winton"
 
 "my own config here
-hi IndentGuidesOdd ctermbg=darkgrey
-hi IndentGuidesEven ctermbg=darkgrey
+hi IndentGuidesOdd ctermbg=236 cterm=NONE ctermfg=NONE
+hi IndentGuidesEven ctermbg=236 cterm=NONE ctermfg=NONE
 
 "hi IncSearch -- no settings --
 "hi WildMenu -- no settings --

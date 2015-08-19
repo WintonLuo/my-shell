@@ -8,21 +8,21 @@ function error() {
 function deployClean() {
     # 删除.vim文件夹
     echo -e "\033[32m[INFO]\033[0m Deleting old vim files..."
-    rm -rf ~/.vim
+    rm -rf $HOME/.vim
 }
 
 function deployInstall() {
     # 拷贝.vim文件
-    mkdir -p ~/.vim
+    mkdir -p $HOME/.vim
     echo -e "\033[32m[INFO]\033[0m Copying new vim files..."
-    cp -r vim/* ~/.vim
-    cp vimrc ~/.vimrc
+    cp -r vim/* $HOME/.vim
+    cp vimrc $HOME/.vimrc
 
     # 安装插件
     VIMRC_FILE="vimrc"
     hostname="git://github.com/"
     echo -e "\033[32m[INFO]\033[0m Install vim plugin..."
-    mkdir -p ~/.vim/bundle
+    mkdir -p $HOME/.vim/bundle
 
     cat ${VIMRC_FILE} | while read line
     do
@@ -33,13 +33,24 @@ function deployInstall() {
             url="${hostname}"$(echo ${plugin})".git"
 
             echo -e "\033[36mPlugin: ${url}\033[0m"
-            cd ~/.vim/bundle/ && git clone ${url}
-            #code=$?
-            #if [ "$code"x != "0"x ] && [ "$code"x != "128"x ]; then
-            #    error "git error $code"
-            #fi
+            cd $HOME/.vim/bundle/ && git clone ${url}
         fi
     done
+}
+
+function deployCheckers() {
+    echo -e "\033[32m[INFO]\033[0m Deploy vim syntax checker..."
+    bash_profile="$HOME/.bash_profile"
+    syntax_check_flag='# SyntaxChecker'
+
+    touch ${bash_profile}
+    grep "${syntax_check_flag}" ${bash_profile} >/dev/null
+    if [ $? = 1 ]; then
+        echo '' >> ${bash_profile}
+        echo ${syntax_check_flag} >> ${bash_profile}
+        echo 'export PATH="$PATH:$HOME/.vim/checkers"' >> ${bash_profile}
+        source ~/.bash_profile
+    fi
 }
 
 option=$1
@@ -47,6 +58,7 @@ if [ "$option"x = "clean"x ]; then
     deployClean
 elif [ "$option"x = "install"x ]; then
     deployInstall
+    #deployCheckers
 else
     echo "Useage: $0 <install|clean>"
     exit 1
