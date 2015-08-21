@@ -44,9 +44,15 @@ set incsearch               " 输入搜索内容时就显示搜索结果
 set hlsearch                " 搜索时高亮显示被找到的文本
 set magic                   " 设置正则表达式模式
 set foldenable              " 启用折叠
-set foldmethod=manual       " 设置根据语法折叠
 set foldlevel=99            " 设置默认不折叠
 set foldcolumn=1            " 显示折叠
+set foldmethod=manual       " 设置根据手动折叠
+
+
+" ==================================================================
+" autocmd
+" ==================================================================
+autocmd FileType python set foldmethod=indent       " 设置python根据缩进折叠
 
 
 " ==================================================================
@@ -55,6 +61,10 @@ set foldcolumn=1            " 显示折叠
 inoremap <buffer> ( ()<Esc>i
 inoremap <buffer> [ []<Esc>i
 inoremap <buffer> { {}<Esc>i
+inoremap <buffer> ' ''<Esc>i
+inoremap <buffer> " ""<Esc>i
+" 设置折叠快捷键为空格
+nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' :'zo')<CR>
 
 
 " ==================================================================
@@ -76,4 +86,6 @@ let g:indent_guides_start_level = 2
 let g:syntastic_check_on_open = 1
 let g:syntastic_cpp_checkers = ['cpplint']
 let g:syntastic_vim_checkers = []
+let g:syntastic_javascript_checkers = ['gjslint']
+let g:syntastic_python_checkers = ['flake8']
 
