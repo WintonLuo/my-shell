@@ -58,11 +58,6 @@ autocmd FileType python set foldmethod=indent       " 设置python根据缩进�
 " ==================================================================
 " 键盘映射
 " ==================================================================
-inoremap <buffer> ( ()<Esc>i
-inoremap <buffer> [ []<Esc>i
-inoremap <buffer> { {}<Esc>i
-inoremap <buffer> ' ''<Esc>i
-inoremap <buffer> " ""<Esc>i
 " 设置折叠快捷键为空格
 nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' :'zo')<CR>
 
