@@ -53,6 +53,7 @@ set foldmethod=manual       " 设置根据手动折叠
 " autocmd
 " ==================================================================
 autocmd FileType python set foldmethod=indent       " 设置python根据缩进折叠
+autocmd FileType html,xml set foldmethod=indent     " 设置html,xml根据缩进折叠
 
 
 " ==================================================================
@@ -83,4 +84,5 @@ let g:syntastic_cpp_checkers = ['cpplint']
 let g:syntastic_vim_checkers = []
 let g:syntastic_javascript_checkers = ['gjslint']
 let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_html_checkers = ['w3']
 
