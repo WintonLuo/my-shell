@@ -43,6 +43,7 @@ function deployCheckers() {
     bash_profile="$HOME/.bash_profile"
     syntax_check_flag='# SyntaxChecker'
 
+    # 添加环境变量
     touch ${bash_profile}
     grep "${syntax_check_flag}" ${bash_profile} >/dev/null
     if [ $? = 1 ]; then
@@ -51,6 +52,10 @@ function deployCheckers() {
         echo 'export PATH="$PATH:$HOME/.vim/checkers"' >> ${bash_profile}
         source ~/.bash_profile
     fi
+
+    # 安装checkers
+    sudo pip install https://closure-linter.googlecode.com/svn/trunk/
+    sudo pip install flake8
 }
 
 option=$1
@@ -58,9 +63,10 @@ if [ "$option"x = "clean"x ]; then
     deployClean
 elif [ "$option"x = "install"x ]; then
     deployInstall
+elif [ "$option"x = "install-checkers" ]; then
     deployCheckers
 else
-    echo "Useage: $0 <install|clean>"
+    echo "Useage: $0 <install | clean | install-checkers>"
     exit 1
 fi
 

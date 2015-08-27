@@ -46,14 +46,7 @@ set magic                   " 设置正则表达式模式
 set foldenable              " 启用折叠
 set foldlevel=99            " 设置默认不折叠
 set foldcolumn=1            " 显示折叠
-set foldmethod=manual       " 设置根据手动折叠
-
-
-" ==================================================================
-" autocmd
-" ==================================================================
-autocmd FileType python set foldmethod=indent       " 设置python根据缩进折叠
-autocmd FileType html,xml set foldmethod=indent     " 设置html,xml根据缩进折叠
+set foldmethod=indent       " 设置根据缩进折叠
 
 
 " ==================================================================
