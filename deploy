@@ -58,6 +58,10 @@ function deployCheckers() {
     sudo pip install flake8
 }
 
+function usage() {
+    echo "Usage: $0 install|clean|install-checkers"
+}
+
 option=$1
 if [ "$option"x = "clean"x ]; then
     deployClean
@@ -66,7 +70,7 @@ elif [ "$option"x = "install"x ]; then
 elif [ "$option"x = "install-checkers" ]; then
     deployCheckers
 else
-    echo "Useage: $0 <install | clean | install-checkers>"
+    usage
     exit 1
 fi
 
