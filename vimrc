@@ -11,7 +11,7 @@ endif
 filetype on                 " 检测文件类型
 filetype plugin on          " 根据文件类型使用不同插件
 filetype indent on          " 根据文件类型使用不同缩进方案
-syntax enable               " 自动语法高亮
+syntax on                   " 自动语法高亮
 color molokai               " 配色方案
 
 set encoding=utf-8          " vim内部编码
