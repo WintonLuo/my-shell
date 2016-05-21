@@ -18,6 +18,7 @@ let g:Powerline_symbols='unicode'
 " 左侧文件列表
 Plugin 'scrooloose/nerdtree'
 map <F3> :NERDTreeToggle<CR>
+let NERDTreeIgnore = ['\.pyc$']
 
 " 高亮代码尾部的空格
 Plugin 'bronson/vim-trailing-whitespace'
