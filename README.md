@@ -3,6 +3,8 @@
 
 ##使用方法
 ```bash
+$ git clone https://github.com/Heaven1881/my-vim.git
+$ cd my-vim
 $ ./install.sh
 ```
 
