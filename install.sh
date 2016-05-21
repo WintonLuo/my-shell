@@ -30,6 +30,6 @@ log_info "installing Vundle..."
 git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
 
 log_info "installing plugins using Vundle..."
-vim -u $HOME/.vimrc.bundles +PlugInstall! +qall
+vim +PluginInstall! +qall
 
 log_info "install compelete successfully!"
