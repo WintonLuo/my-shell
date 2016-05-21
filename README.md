@@ -18,4 +18,4 @@ $ ./install.sh
 | scrooloose/syntastic            | 语法检查         |
 
 ## 其他
-- `install.sh`的内容主要参考[k-vim](https://github.com/wklken/k-vim)的`install.sh`
+- `install.sh`和`vimrc.bundle`的内容主要参考[k-vim](https://github.com/wklken/k-vim)的`install.sh`
