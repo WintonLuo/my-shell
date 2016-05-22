@@ -52,9 +52,6 @@ noremap <F1> <Esc>
 " F2显示/隐藏行号
 noremap <F2> :set number! number?<CR>
 
-" F3 显示可打印字符开关
-nnoremap <F3> :set list! list?<CR>
-
 " F4 换行开关
 nnoremap <F4> :set wrap! wrap?<CR>
 
