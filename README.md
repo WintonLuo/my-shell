@@ -1,10 +1,10 @@
-# my-vim
-这是我个人使用vim配置，主要是为了让我在使用服务器的时候能够快速配置服务器端的vim
+# my-shell
+这是我个人使用shell配置，主要是为了让我在使用服务器的时候能够快速配置
 
 ##使用方法
 ```bash
-$ git clone https://github.com/Heaven1881/my-vim.git
-$ cd my-vim
+$ git clone https://github.com/Heaven1881/my-shell.git
+$ cd my-shell
 $ ./install.sh
 ```
 
