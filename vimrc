@@ -1,6 +1,6 @@
 set nocompatible            " 关闭 vi 兼容模式
 
-" install bundles
+" 安装插件
 if filereadable(expand("~/.vimrc.bundles"))
     source ~/.vimrc.bundles
 endif
