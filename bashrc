@@ -15,7 +15,7 @@ UCL_CYAN="\033[0;36m"
 UCL_WHITE="\033[0;37m"
 
 export PS1="
-[${UCL_BLACK}\u${UCL_WHITE}@${UCL_RED}\h ${UCL_YELLOW}\A ${UCL_CYAN}#\j${UCL_NORMAL}-[${UCL_GREEN}\w${UCL_NORMAL}
+[${UCL_WHITE}\u${UCL_WHITE}@${UCL_RED}\h ${UCL_YELLOW}\A ${UCL_CYAN}#\j${UCL_NORMAL}-[${UCL_GREEN}\w${UCL_NORMAL}
 \$ "
 #export PS1="\n[\e[0;34m\u\e[0;37m@\e[0;31m\h \e[0;33m\A \e[0;36m#\j\e[0;0m]-[\e[0;32m\w\e[0;0m]\n\$ "
 export CLICOLOR=1
