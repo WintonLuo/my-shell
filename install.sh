@@ -29,6 +29,8 @@ soft_link $CURRENT_DIR/vim $HOME/.vim
 soft_link $CURRENT_DIR/bashrc $HOME/.bashrc
 soft_link $CURRENT_DIR/bash_profile $HOME/.bash_profile
 
+touch ~/.bashrc.more
+
 log_info "source bashrc..."
 source ~/.bashrc
 

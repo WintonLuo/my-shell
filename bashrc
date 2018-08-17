@@ -2,7 +2,22 @@
 ########################################
 # UI 设置
 ########################################
-export PS1="\n[\e[0;34m\u\e[0;37m@\e[0;31m\h \e[0;33m\A \e[0;36m#\j\e[0;0m]-[\e[0;32m\w\e[0;0m]\n\$ "
+# 颜色设置
+UCL_RESET=1
+UCL_NORMAL="\033[0;0m]"
+UCL_BLACK="\033[1;30m"
+UCL_RED="\033[0;31m"
+UCL_GREEN="\033[0;32m"
+UCL_YELLOW="\033[0;33m"
+UCL_BLUE="\033[0;34m"
+UCL_PURPLE="\033[0;35m"
+UCL_CYAN="\033[0;36m"
+UCL_WHITE="\033[0;37m"
+
+export PS1="
+[${UCL_BLACK}\u${UCL_WHITE}@${UCL_RED}\h ${UCL_YELLOW}\A ${UCL_CYAN}#\j${UCL_NORMAL}-[${UCL_GREEN}\w${UCL_NORMAL}
+\$ "
+#export PS1="\n[\e[0;34m\u\e[0;37m@\e[0;31m\h \e[0;33m\A \e[0;36m#\j\e[0;0m]-[\e[0;32m\w\e[0;0m]\n\$ "
 export CLICOLOR=1
 
 ########################################
@@ -10,10 +25,14 @@ export CLICOLOR=1
 ########################################
 alias ..='cd ..'
 alias ...='cd ../..'
-alias ....='cd ../../..'
-alias .....='cd ../../../..'
+alias ..2='cd ../..'
+alias ..3='cd ../../..'
+alias ..4='cd ../../../..'
+alias ..5='cd ../../../../..'
+alias ..6='cd ../../../../../..'
+
 alias ll='ls -lh'
-alias ldu='du -d 0 -h'
+alias ldu='du -d 1 -h'
 
 ########################################
 # 其他设置
